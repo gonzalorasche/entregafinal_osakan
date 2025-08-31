@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME - OSAKAN CRUISE LINE</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Osakan Cruise Line - Descubrí nuestra exclusiva flota de cruceros de lujo. Viajes inolvidables por el Mediterráneo, Europa y destinos exóticos.">
+    <meta name="keywords" content="cruceros, Osakan, viajes, lujo, crucero mediterráneo, turismo, vacaciones en crucero">
+    <meta name="author" content="OSAKAN Cruise Line">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/img/iconrel.png" type="image/png">
+
+    <!-- CSS y Fuentes -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./sass/main.css">
+</head>
+
+<body class="home">
+  
+<!-- NAV PRINCIPAL -->
+<nav class="nav-desktop">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="./index.html" class="nav-logo">
+            <img src="assets/img/logo-sombra.svg" alt="Logo de Osakan" />
+        </a>
+
+        <!-- Menú de escritorio -->
+        <ul class="nav-menu d-none d-lg-flex">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="./assets/pages/flota.html">Flota</a></li>
+            <li><a href="./assets/pages/destinos.html">Destinos</a></li>
+            <li><a href="./assets/pages/nosotros.html">Nosotros</a></li>
+            <li><a href="./assets/pages/contacto.html">Contacto</a></li>
+            <li><a href="./assets/pages/crash.html" class="disabled">Reservas</a></li>
+        </ul>
+
+        <!-- Botón hamburguesa solo mobile -->
+        <button class="btn btn-hamb d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav">
+        <img src="assets/img/menu_hamb_cruise_white-01.svg" alt="Menú" />
+        </button>
+    </div>
+</nav>
+
+<!-- OFFCANVAS MOBILE -->
+<div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+        <p>Menu</p>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+        <nav class="nav flex-column">
+            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="./assets/pages/flota.html">Flota</a>
+            <a class="nav-link" href="./assets/pages/destinos.html">Destinos</a>
+            <a class="nav-link" href="./assets/pages/nosotros.html">Nosotros</a>
+            <a class="nav-link" href="./assets/pages/contacto.html">Contacto</a>
+            <a class="nav-link disabled">Reservas</a>
+        </nav>
+    </div>
+</div>
+
+
+<!-- HERO SECTION -->
+<section class="hero_index">
+  <div class="hero__container_index">
+    <div class="hero__content_index">
+      <h1>30% OFF</h1>
+      <p>EN VIAJES AL CARIBE +</p>
+      <ul class="hero__features_index">
+        <li>BAR ABIERTO</li>
+        <li>FREE WIFI</li>
+        <li>CREDITO A BORDO</li>
+      </ul>
+      <a href="./assets/pages/contacto.html" class="btn-contacto">Contactá a un agente</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- BUSCADOR DE CRUCEROS -->
+<section class="search-section">
+  <div class="container">
+    <div class="search-bar">
+
+      <!-- Título y subtítulo -->
+      <h2 class="search-title">Date el gusto, reservá tu viaje.</h2>
+
+      <!-- Campos del buscador -->
+      <div class="search-fields">
+
+        <!-- DESTINO -->
+        <div class="search-field">
+          <div class="field-text">
+            <label for="destino">
+              <i class="bi bi-geo-alt-fill"></i> Destino
+            </label>
+            <select>
+              <option value="">Elegir destino</option>
+              <option value="napoles">Nápoles</option>
+              <option value="santorini">Santorini</option>
+              <option value="estambul">Estambul</option>
+              <option value="limassol">Limassol</option>
+              <option value="rodas">Rodas</option>
+              <option value="mykonos">Mykonos</option>
+              <option value="kusadasi">Kusadasi</option>
+              <option value="alexandria">Alejandría</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- AÑO -->
+        <div class="search-field">
+          <div class="field-text">
+            <label for="anio">
+              <i class="bi bi-calendar3"></i> Año
+            </label>
+
+            <select>
+              <option value="">Elegir año</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- MES -->
+        <div class="search-field">
+          <div class="field-text">
+            <label for="mes">
+              <i class="bi bi-calendar3"></i> Mes
+            </label>
+            <select>
+              <option value="">Elegir mes</option>
+              <option value="enero">Enero</option>
+              <option value="febrero">Febrero</option>
+              <option value="marzo">Marzo</option>
+              <option value="abril">Abril</option>
+              <option value="mayo">Mayo</option>
+              <option value="junio">Junio</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- HUÉSPEDES -->
+        <div class="search-field">
+          <div class="field-text">
+            <label for="destino">
+              <i class="bi bi-person-fill"></i> Huéspedes
+            </label>
+
+            <select>
+              <option value="">Elegir huéspedes</option>
+              <option value="1">1 persona</option>
+              <option value="2">2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Botones debajo -->
+      <div class="search-actions">
+        <button type="button" class="btn-clear">Borrar filtros</button>
+        <button type="button" class="btn-search" onclick="location.href='assets/pages/crash.html'">
+            Buscar cruceros
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!--CAROUSEL E IFRAME-->
+<div class="hero-similar-width">
+
+  <!-- Carousel -->
+  <div class="card-carousel">
+    <h3 class="section-title">
+      <i class="bi bi-geo-alt-fill"></i> Destinos soñados
+    </h3>
+    <div id="carouselDestinos" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card custom-card-inner">
+            <img src="assets/img/bahamas_cale_nuevo.jpg" class="card-img-top" alt="Bahamas">
+            <div class="card-body">
+              <h4 class="card-title">Bahamas</h4>
+              <p class="card-text">Playas paradisíacas y sol garantizado.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-card-inner">
+            <img src="assets/img/malaga_cale_nuevo.jpg" class="card-img-top" alt="Malaga">
+            <div class="card-body">
+              <h4 class="card-title">Malaga</h4>
+              <p class="card-text">Cultura, historia y gastronomía mediterránea.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-card-inner">
+            <img src="assets/img/napoles_cale_nuevo.jpg" class="card-img-top" alt="Napoles">
+            <div class="card-body">
+              <h4 class="card-title">Nápoles</h4>
+              <p class="card-text">Italia clásica y vistas espectaculares.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-card-inner">
+            <img src="assets/img/santorini_cale_nuevo.jpg" class="card-img-top" alt="Santorini">
+            <div class="card-body">
+              <h4 class="card-title">Santorini</h4>
+              <p class="card-text">Islas griegas y atardeceres inolvidables.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-card-inner">
+            <img src="assets/img/tokio_cale_nuevo.jpg" class="card-img-top" alt="Tokio">
+            <div class="card-body">
+              <h4 class="card-title">Tokio</h4>
+              <p class="card-text">Modernidad y tradición en Japón.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestinos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon shadow-glow" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselDestinos" data-bs-slide="next">
+        <span class="carousel-control-next-icon shadow-glow" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Video -->
+  <div class="card-video">
+    <h3 class="section-title">
+      <i class="bi bi-star-fill"></i></i> Nueva alianza con NCL
+    </h3>
+
+    <div class="card custom-card-inner">
+      <iframe src="https://www.youtube.com/embed/sp4KvinXe48?si=7FSlMaCo08435byq" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allowfullscreen></iframe>
+      <div class="card-body">
+        <h4 class="card-title">NCL PARTNERSHIP</h4>
+        <p class="card-text">Conocé nuestra nueva alianza.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nueva tarjeta OSAKAN ETERNITY -->
+  <div class="card-third">
+    <h3 class="section-title">
+      <i class="bi bi-calendar-check"></i> Nuevo Barco
+    </h3>
+    <div class="card custom-card-inner">
+      <img src="assets/img/foto_nuevo_crucero.webp" class="card-img-top" alt="OSAKAN ETERNITY">
+      <div class="card-body">
+        <h4 class="card-title">OSAKAN ETERNITY</h4>
+        <p class="card-text">Navegando este 2026</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!--FOOTER-->
+    <footer>
+        <nav class="footer-nav">
+            <div class="social-iconos">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="assets/img/redes_ig.svg" alt="Instagram" />
+                </a>
+                <a href="https://x.com/" target="_blank">
+                    <img src="assets/img/redes_x.svg" alt="X" />
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="assets/img/redes_fb.svg" alt="Facebook" />
+                </a>
+            </div>
+            <p class="copyright">© 2025 Osakan Cruise Line. Todos los derechos reservados.</p>
+            <p class="legal-text">
+                Este sitio web fue desarrollado por <span class="bold">Gonzalo Raschella</span> como parte de un proyecto académico.
+                El contenido, imágenes y descripciones utilizadas tienen fines ilustrativos y no corresponden a una empresa real.
+                Cualquier similitud con nombres, marcas o servicios existentes es pura coincidencia.
+            </p>
+        </nav>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+/* HISTORIA DE LA COMPAÑIA - NOSOTROS */
+.historia-nosotros {
+    background-color: $color-blanco;
+    padding: 4rem 1rem; /* espacio arriba y abajo */
+}
+
+.historia-nosotros__container {
+    max-width: 1200px; /* mismo ancho que FAQ */
+    margin: 0 auto;
+}
+
+.historia-nosotros__titulo {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 800;
+    color: $color-principal;
+    margin-bottom: 2rem;
+}
+
+/* Contenido: texto e imágenes lado a lado */
+.historia-nosotros__contenido {
+    display: flex;
+    flex-wrap: wrap; /* para que sea responsive */
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Texto */
+.historia-nosotros__texto {
+    flex: 1 1 500px;
+    color: #222;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.historia-nosotros__texto p {
+    margin-bottom: 1.5rem;
+}
+
+/* Imágenes */
+.historia-nosotros__imagenes {
+    flex: 1 1 500px; 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.historia-nosotros__img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: $box-shadow;
+    object-fit: cover;
+}
+
+/* RESPONSIVE: mobile */
+@media(max-width: 768px) {
+    .historia-nosotros__contenido {
+        flex-direction: column;
+    }
+
+    .historia-nosotros__texto,
+    .historia-nosotros__imagenes {
+        flex: 1 1 100%;
+    }
+}
+
+//FAQ//
+.accordion_nosotros {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem; /* algo de padding */
+}
+
+.h2_nosotros_faq {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    color: $color-principal;
+    margin-bottom: 2rem;
+}
+
+/* Accordion items */
+.accordion-item_nosotros {
+    border: 1px solid #f0cc20;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background: $color-blanco;
+    box-shadow: $box-shadow;
+}
+
+/* Accordion header button */
+.accordion-button_nosotros {
+    background-color: $color-secundario;
+    color: $color-blanco;
+    font-weight: $font-weight-bold;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 0;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.accordion-button_nosotros:hover {
+    background-color: $color-nav-active;
+}
+
+.accordion-button_nosotros:focus {
+    box-shadow: none;
+}
+
+/* Collapsible body */
+.accordion-body_nosotros {
+    padding: 1rem 1.5rem;
+    background-color: $color-fondo-suave;
+    color: #222;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Para que se vea la separación */
+.accordion-collapse_nosotros {
+    border-top: 1px solid #f0cc20;
+}

@@ -1,0 +1,401 @@
+/* HERO SECTION INDEX*/
+.hero_index {
+    background: url('../assets/img/fondo_hero_2.jpg') center/cover no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    position: relative;
+    padding: 30px 15px 40px 15px; 
+}
+
+.hero__container_index {
+    max-width: 1140px; 
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero__content_index h1 {
+    color: $color-secundario;
+    font-family: $fuente-principal;
+    font-weight: 1000 !important;
+    font-size: 4rem !important;
+    margin-bottom: 10px;
+}
+
+.hero__content_index p {
+    color: $color-secundario;
+    font-family: $fuente-principal;
+    font-weight: $font-weight-medium;
+    font-size: 2.25rem;
+    margin-bottom: 20px;
+}
+
+.hero__features_index {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.hero__features_index li {
+    color: $color-nav-otros;
+    font-family: $fuente-principal;
+    font-weight: 500;
+}
+
+/* BOTON AJUSTES */
+.btn-contacto {
+    font-family: $fuente-principal;
+    font-weight: $font-weight-medium;
+    font-size: 1rem;
+    color: $color-principal;
+    background-color: $color-nav-hover2;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-contacto:hover {
+    background-color: $color-secundario;
+    transform: translateY(-2px);
+}
+
+/* DESKTOP */
+@media(min-width: 992px) {
+    .hero_index {
+    min-height: 70vh; 
+    padding-top: 50px; 
+    padding-bottom: 60px;
+    }
+
+    .hero__content_index h1 {
+        font-size: 3rem;
+    }
+
+    .hero__content_index p {
+        font-size: 1.5rem;
+    }
+
+    .hero__features_index {
+        gap: 30px;
+    }
+}
+
+/* RESPONSIVE MENOR */
+@media(max-width: 991px) {
+    .hero_index {
+        min-height: 50vh;   /* ocupa más altura en mobile */
+        padding-top: 60px;  
+        padding-bottom: 50px;  /* espacio antes del buscador */
+    }
+
+    .hero__container_index h1 {
+        font-size: 2rem;
+    }
+
+    .hero__container_index p {
+        font-size: 1.1rem;
+    }
+
+    .hero__features_index {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+//ICONOS BOOSTRAP//
+label i {
+    margin-right: 6px;
+    font-size: 1rem; /* ajustá tamaño */
+    color: $color-principal;
+    vertical-align: middle;
+}
+
+
+/* ----- BUSCADOR INDEX *SOBRE EL HERO* ----- */
+
+.search-bar {
+    background: white;
+    border-radius: 25px;
+    padding: 25px 20px 20px 20px;
+    max-width: 59vw;
+    margin: -120px auto 40px auto; /* menos aire sobre hero */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+    position: relative;
+    border: 1px solid #e0e0e0;
+}
+
+/* Título y subtítulo del buscador */
+.search-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: $color-principal;
+    margin-bottom: 20px;
+    padding-left: 0.7vw;
+}
+
+/* Campos */
+.search-fields {
+    display: flex;
+    gap: 0;
+    margin-bottom: 20px;
+}
+
+.search-field {
+    display: flex;
+    flex: 1;
+    position: relative;
+    padding: 0 10px;
+}
+
+.field-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.field-text label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: $color-principal;
+}
+
+.field-text select {
+    height: 48px; /* más alto para mejor visual */
+    width: 100%;
+    padding: 0 12px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    background-color: $color-nav-hover;
+    color: $color-principal;
+    font-family: $fuente-principal;
+    font-size: 14px;
+    appearance: none;
+    line-height: 1.2;
+}
+
+.field-text select option {
+    background-color: $color-secundario;
+    color: $color-negro;
+}
+
+/* Separadores verticales */
+.search-field:not(:last-child)::after {
+    content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background-color: #ddd;
+}
+
+/* Botones */
+.search-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn-clear {
+    background: none;
+    border: none;
+    color: $color-nav-disable;
+    text-decoration: underline;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-clear:hover {
+    color: $color-secundario;
+}
+
+.btn-search {
+    background-color: $color-secundario;
+    color: $color-negro;
+    border: none;
+    padding: 12px 0;
+    border-radius: $radius-large;
+    cursor: pointer;
+    transition: background 0.3s;
+    flex: 1;
+    margin-left: 10px;
+}
+
+/* Ajuste de ancho de botones para alinearse con los selects */
+.search-actions .btn-clear {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+/* HERO SECTION MOBILE */
+@media(max-width: 991px) {
+    .hero_index {
+        min-height: 60vh; /* le da mas altura en mobile*/
+        background-size: cover;
+        background-position: center;
+        padding-top: 60px;  
+        padding-bottom: 50px;
+}
+
+/* ocupar el ancho */
+    .search-bar {
+        max-width: 100%;
+        margin: -120px 0 40px 0; 
+        padding: 25px 15px 20px 15px; 
+        box-sizing: border-box; 
+}
+
+/* selects se apilan verticalmente */
+.search-fields {
+    flex-direction: column;
+    gap: 15px; /* separa verticalmente */
+}
+
+.search-field:not(:last-child)::after {
+    display: none;
+}
+
+/* botones se apilan también */
+.search-actions {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-clear,
+.btn-search {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    }
+}
+
+/* CELULAR HORIZONTAL (landscape) */
+@media (max-width: 1300px) and (orientation: landscape) {
+.hero_index {
+    min-height: 60vh; /* hero un poco más alto */
+    padding-bottom: 20px; /* espacio antes del buscador */
+}
+
+.search-bar {
+    margin: 20px auto 40px auto; /* debajo del hero, centrado */
+    width: 90%;                   /* ocupa la mayor parte del ancho, respetando margen */
+    max-width: 90%;               /* no excede el ancho del contenedor */
+    padding: 20px;                /* aire interno */
+    box-sizing: border-box;       
+    }
+}
+
+//CAROUSEL//
+.hero-similar-width {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px; /* aire lateral */
+}
+
+/* Las 3 columnas iguales */
+.card-carousel,
+.card-video,
+.card-third {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-blanco;
+    border-radius: $radius-medium;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+}
+
+/* Títulos de sección */
+.section-title {
+    font-family: $fuente-principal;
+    font-weight: $font-weight-bold;
+    font-size: 1.5rem;
+    text-align: center;
+    color: $color-principal;
+    margin: 15px 0;
+}
+
+/* Carousel / Card images */
+.custom-card-inner img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+
+/* Card body */
+.custom-card-inner .card-body {
+    padding: 15px;
+}
+
+.custom-card-inner .card-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.custom-card-inner .card-text {
+    font-size: 1rem;
+    color: $fuente-principal;
+}
+
+/* Video iframe dentro de card */
+.card-video iframe {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 0; /* sin borde */
+}
+
+/* Carousel controls solo flechas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none;
+    width: 40px;
+    height: 40px;
+}
+
+.shadow-glow {
+    filter: drop-shadow(0 0 5px $color-secundario) drop-shadow(0 0 10px $color-secundario);
+}
+
+.card .card-title,
+.card .card-text {
+    color:$color-principal;
+    font-family: "Inter";
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+    .hero-similar-width {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 10px; /* aire lateral */
+    }
+}
+
+.card-carousel,
+.card-video,
+.card-third {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+
+  /* Borde gris clarito */
+    border: 1px solid $color-bordes 
+}

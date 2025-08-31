@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESTINOS - OSAKAN CRUISE LINE</title>
+    <meta name="description" content="Descubrí los destinos más elegidos por los turistas de Osakan Cruise Line. Experiencias únicas en los puertos más fascinantes del mundo.">
+    <meta name="keywords" content="cruceros, destinos, Osakan Cruise Line, viajes en crucero, turismo marítimo, vacaciones, destinos turísticos, santorini, napoles, malaga, bahamas, tokio">
+    <meta name="author" content="OSAKAN Cruise Line">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../img/iconrel.png" type="image/png">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../../sass/main.css">
+</head>
+
+<body class="home">
+
+<!-- NAV PRINCIPAL -->
+<nav class="nav-desktop">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="../../index.html" class="nav-logo">
+            <img src="../img/logo-sombra.svg" alt="Logo de Osakan" />
+        </a>
+
+        <!-- Menú de escritorio -->
+        <ul class="nav-menu d-none d-lg-flex">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="./flota.html">Flota</a></li>
+            <li><a href="./destinos.html" class="active">Destinos</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="#" class="disabled" >Reservas</a></li>
+        </ul>
+
+        <!-- Botón hamburguesa solo mobile -->
+        <button class="btn btn-hamb d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav">
+        <img src="../img/menu_hamb_cruise_white-01.svg" alt="Menú" />
+        </button>
+    </div>
+</nav>
+
+<!-- OFFCANVAS MOBILE -->
+<div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+    <div class="offcanvas-header">
+        <p>Menu</p>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+        <nav class="nav flex-column">
+            <a class="nav-link" href="../../index.html">Home</a>
+            <a class="nav-link" href="./flota.html">Flota</a>
+            <a class="nav-link active" href="./destinos.html">Destinos</a>
+            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+            <a class="nav-link" href="./contacto.html">Contacto</a>
+            <a class="nav-link disabled">Reservas</a>
+        </nav>
+    </div>
+</div>
+
+
+<!-- ================= SECCIÓN DESTINOS ================= -->
+<section class="destinos container">
+  <h1 class="page-title">Destinos del Crucero</h1>
+  <p class="destinos-intro">
+    Descubrí los puertos más fascinantes del mundo en tu próximo viaje en crucero.
+    Cada destino ofrece experiencias únicas, cultura y paisajes inolvidables.
+  </p>
+
+  <div class="destinos-grid">
+
+    <!-- TOKIO -->
+    <article class="destino-card">
+      <img src="../img/tokio_cale_nuevo.jpg" alt="Tokio, Japón">
+      <div class="destino-content">
+        <h3>Tokio</h3>
+        <h4>La fusión entre tradición y modernidad</h4>
+        <p>
+          Explorá los templos ancestrales de Asakusa, paseá por los barrios futuristas de Shibuya
+          y disfrutá de la mejor gastronomía japonesa frente al mar.
+        </p>
+        <ul>
+          <li>Visitar el Templo Sensō-ji</li>
+          <li>Subir a la Torre de Tokio</li>
+          <li>Degustar sushi en Tsukiji</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- NASSAU -->
+    <article class="destino-card">
+      <img src="../img/bahamas_cale_nuevo.jpg" alt="Nassau, Bahamas">
+      <div class="destino-content">
+        <h3>Nassau</h3>
+        <h4>Playas paradisíacas del Caribe</h4>
+        <p>
+          Arena blanca, aguas cristalinas y un clima ideal para desconectar. Nassau es el lugar perfecto
+          para relajarse y disfrutar actividades acuáticas inolvidables.
+        </p>
+        <ul>
+          <li>Snorkel en arrecifes de coral</li>
+          <li>Paseo por Paradise Island</li>
+          <li>Disfrutar del mercado Straw Market</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- MÁLAGA -->
+    <article class="destino-card">
+      <img src="../img/malaga_cale_nuevo.jpg" alt="Málaga, España">
+      <div class="destino-content">
+        <h3>Málaga</h3>
+        <h4>Arte, cultura y sabor mediterráneo</h4>
+        <p>
+          Una ciudad vibrante en la Costa del Sol. Descubrí su historia, museos y una gastronomía
+          mediterránea que te cautivará.
+        </p>
+        <ul>
+          <li>Visitar la Alcazaba</li>
+          <li>Museo Picasso</li>
+          <li>Tapas en el centro histórico</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- SANTORINI -->
+    <article class="destino-card">
+      <img src="../img/santorini_cale_nuevo.jpg" alt="Santorini, Grecia">
+      <div class="destino-content">
+        <h3>Santorini</h3>
+        <h4>Postales entre el azul y el blanco</h4>
+        <p>
+          Famosa por sus atardeceres en Oia y sus casas encaladas frente al mar Egeo,
+          Santorini es un destino romántico y encantador.
+        </p>
+        <ul>
+          <li>Atardecer en Oia</li>
+          <li>Playas de arena volcánica</li>
+          <li>Cata de vinos locales</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- NÁPOLES -->
+    <article class="destino-card">
+      <img src="../img/napoles_cale_nuevo.jpg" alt="Nápoles, Italia">
+      <div class="destino-content">
+        <h3>Nápoles</h3>
+        <h4>Historia, pizza y vistas al Vesubio</h4>
+        <p>
+          Una ciudad italiana llena de vida. Entre ruinas romanas, castillos medievales
+          y la auténtica pizza napolitana, es imposible no enamorarse.
+        </p>
+        <ul>
+          <li>Excursión a Pompeya</li>
+          <li>Castel dell'Ovo</li>
+          <li>Comer pizza en el centro histórico</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+
+<!--FOOTER-->
+    <footer>
+        <nav class="footer-nav">
+            <div class="social-iconos">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="../img/redes_ig.svg" alt="Instagram" />
+                </a>
+                <a href="https://x.com/" target="_blank">
+                    <img src="../img/redes_x.svg" alt="X" />
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="../img/redes_fb.svg" alt="Facebook" />
+                </a>
+            </div>
+            <p class="copyright">© 2025 Osakan Cruise Line. Todos los derechos reservados.</p>
+            <p class="legal-text">
+                Este sitio web fue desarrollado por <span class="bold">Gonzalo Raschella</span> como parte de un proyecto académico.
+                El contenido, imágenes y descripciones utilizadas tienen fines ilustrativos y no corresponden a una empresa real.
+                Cualquier similitud con nombres, marcas o servicios existentes es pura coincidencia.
+            </p>
+        </nav>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

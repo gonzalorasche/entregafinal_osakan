@@ -1,0 +1,99 @@
+/* PAGINA DESTINOS*/
+
+/* TARJETA DESTINO - full width */
+.destino-card {
+    display: flex;
+    width: 100%;
+    background-color: $color-blanco;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: $box-shadow;
+    margin-bottom: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 250px; /* altura fija para todas las tarjetas */
+}
+
+.destino-card:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow;
+}
+
+/* IMAGEN */
+.destino-card img {
+    width: 40%;
+    height: 100%; /* ocupa toda la altura de la tarjeta */
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* CONTENIDO */
+.destino-content {
+    padding: 20px 25px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* ocupa toda la altura de la tarjeta */
+}
+
+.page-title {
+    font-size: 2.5rem; /* tamaño del título */
+    font-weight: $font-weight-bold;
+    color: $color-principal;
+    margin-top: 40px;   /* espacio arriba del título */
+    margin-bottom: 30px; /* espacio debajo del título */
+    text-align: left; 
+    font-family: "Inter";
+}
+
+.destinos-intro{
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Títulos y texto */
+.destino-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-secundario;
+}
+
+.destino-content h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $color-principal;
+}
+
+.destino-content p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: $color-nav-disable;
+}
+
+.destino-content li{
+    color: $fuente-principal;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .destino-card {
+        flex-direction: column;
+        height: auto; /* altura automática según contenido */
+    }
+
+    .destino-card img {
+        width: 100%;
+        height: 200px; /* altura más chica en celu */
+        border-radius: 20px 20px 0 0; /* redondea solo arriba */
+    }
+
+    .destino-content {
+        width: 100%;
+        padding: 15px;
+    }
+}
