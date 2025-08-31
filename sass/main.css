@@ -1058,6 +1058,11 @@ label i {
     box-sizing: border-box;
   }
 }
+a.link-section-title {
+  text-decoration: none; /* Quita el subrayado */
+  color: inherit; /* Mantiene el color del h3 */
+}
+
 .hero-similar-width {
   max-width: 1140px;
   margin: 0 auto;
