@@ -316,10 +316,6 @@ footer {
   transition: transform 0.4s ease;
 }
 
-.contacto-imagenes img:hover {
-  transform: scale(1.05);
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .contacto-container {

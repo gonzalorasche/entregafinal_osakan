@@ -115,29 +115,10 @@
     transition: transform 0.4s ease;
 }
 
-.contacto-imagenes img:hover {
-    transform: scale(1.05);
-}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .contacto-container {
-        grid-template-columns: 1fr; 
-    }
-
-    .contacto-imagenes {
-        grid-template-rows: 1fr; 
-        gap: 1rem;
-    }
-
-    .contacto-imagenes img {
-        display: none; 
-    }
-
-    .contacto-imagenes img:first-child {
-        display: block; 
-        width: 100%;
-        height: auto;
-        object-fit: cover;
+        grid-template-columns: 1fr;
     }
 }
