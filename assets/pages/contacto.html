@@ -70,10 +70,10 @@
 </div>
 
 
-<!--FORMULARIO-->
+<!--FORMULARIO SIN IMÁGENES-->
 <section class="contacto-section">
   <div class="contacto-container">
-    <!-- Columna izquierda: Formulario -->
+    <!-- Solo columna izquierda: Formulario -->
     <form id="contactoForm" class="contacto-form">
       <h2>Formulario de Contacto</h2>
 
@@ -90,7 +90,7 @@
         <label>Sexo:</label>
         <div class="sexo-options">
           <label>
-            <input type="radio" name="sexo" value="masculino"> Masculino
+            <input type="radio" name="sexo" value="masculino" required> Masculino
           </label>
           <label>
             <input type="radio" name="sexo" value="femenino"> Femenino
@@ -100,8 +100,6 @@
           </label>
         </div>
       </div>
-
-
 
       <label for="destinos">Destino preferido *</label>
       <select id="destinos" name="destinos" required>
@@ -123,13 +121,6 @@
 
       <button type="submit">Enviar</button>
     </form>
-
-    <!-- Columna derecha: Imágenes -->
-    <div class="contacto-imagenes">
-      <img src="../img/crucero1.jpg" alt="Crucero 1">
-      <img src="../img/malaga_cale_nuevo.jpg" alt="Crucero 2">
-      <img src="../img/nosotros1.png" alt="Crucero 3">
-    </div>
   </div>
 </section>
 
@@ -144,6 +135,7 @@
     }
   });
 </script>
+
 
 
 
