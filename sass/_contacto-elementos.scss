@@ -1,130 +1,130 @@
-//FORMULARIO//
-
-.contacto_contacto {
-    padding: 4rem 5%; 
-    background: $color-fondo-suave;
+.contacto-section {
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, $color-bordes, $color-blanco);
 }
 
-.contacto_container {
-    max-width: 100%; /* antes estaba 1200px */
-    margin: 0 auto;
-}
-
-/* TÍTULO Y TEXTO */
-.contacto_titulo {
-    font-size: 2rem;
-    font-weight: $font-weight-bold;
-    margin-bottom: 1rem;
-    color: $fuente-principal;
-}
-.contacto_texto {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-/* FLEX FORMULARIO + IMAGENES */
-.contacto_flex {
-    display: flex;
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
 }
-.contacto_formulario {
-    flex: 1;
+
+/* ===== FORMULARIO ===== */
+.contacto-form {
     background: $color-blanco;
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 16px;
+    box-shadow: $box-shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contacto-form h2 {
+    font-family: $fuente-principal;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: left;
+    color: $color-secundario;
+    font-weight: $font-weight-bold;
+}
+
+.contacto-form label {
+    font-weight: 600;
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+    color:$color-principal;
+}
+
+.contacto-form input,
+.contacto-form select,
+.contacto-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid $color-bordes;
+    border-radius: $radius-medium;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contacto-form input:focus,
+.contacto-form select:focus,
+.contacto-form textarea:focus {
+    border-color: $color-nav-active;
+    outline: none;
     box-shadow: $box-shadow;
 }
 
-/* FILAS Y COLUMNAS */
-.contacto_row {
+.sexo-group {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 1rem;
-}
-.contacto_col {
-    flex: 1;
-    min-width: 150px;
-    display: flex;
-    flex-direction: column;
-}
-.contacto_col_full {
-    flex: 1 1 100%;
-    display: flex;
-    flex-direction: column;
+    margin-top: 0.5rem;
 }
 
-/* INPUT, TEXTAREA, SELECT, RADIO, CHECKBOX */
-.contacto_formulario input[type="text"],
-.contacto_formulario input[type="date"],
-.contacto_formulario textarea {
-    padding: 0.6rem 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 0.95rem;
-    width: 100%;
-}
-.contacto_formulario textarea {
-    resize: vertical;
+.sexo-options {
+  display: block;
 }
 
-/* RADIO Y CHECKBOX */
-.contacto_sexo label,
-.contacto_destinos label {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-right: 1rem;
-    font-size: 0.95rem;
-    cursor: pointer;
-}
-.contacto_sexo input,
-.contacto_destinos input {
-    width: 18px;
-    height: 18px;
+.sexo-options label {
+  display: block;        // cada opción en su propia línea
+  margin: 4px 0;         // espacio entre líneas
+  font-weight: normal;   // nada en negrita
+  cursor: default;       // el cursor normal
 }
 
-/* BOTON ENVIAR */
-.contacto_boton {
-    background: $color-secundario;
-    color: $color-blanco;
+.sexo-options input[type="radio"] {
+  all: unset;            // limpia cualquier estilo heredado de tu SASS
+  appearance: radio;     // lo vuelve un radio "común" del navegador
+  margin-right: 6px;     // separación entre el círculo y el texto
+}
+
+
+
+
+.contacto-form button {
+    margin-top: 1.5rem;
+    padding: 1rem;
     border: none;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
+    border-radius: 12px;
+    background: $color-principal;
+    color: $color-blanco;
+    font-size: 1.2rem;
     font-weight: $font-weight-bold;
-    border-radius: $radius-small;
     cursor: pointer;
     transition: 0.3s;
 }
-.contacto_boton:hover {
-    background: $color-nav-active;
+
+.contacto-form button:hover {
+    background: $color-secundario;
+    transform: translateY(-2px);
 }
 
-/* IMÁGENES */
-.contacto_imagenes {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+/* ===== IMÁGENES ===== */
+.contacto-imagenes {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
 }
-.contacto_img {
+
+.contacto-imagenes img {
     width: 100%;
-    border-radius: $radius-medium;
+    height: 100%;
     object-fit: cover;
+    border-radius: 16px;
     box-shadow: $box-shadow;
+    transition: transform 0.4s ease;
 }
 
-/* RESPONSIVE */
-@media(max-width: 768px) {
-    .contacto_flex {
-        flex-direction: column;
-    }
-    .contacto_formulario {
-        padding: 1.5rem;
-    }
-    .contacto_row {
-        flex-direction: column;
+.contacto-imagenes img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .contacto-container {
+        grid-template-columns: 1fr;
     }
 }

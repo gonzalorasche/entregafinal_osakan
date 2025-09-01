@@ -71,100 +71,80 @@
 
 
 <!--FORMULARIO-->
+<section class="contacto-section">
+  <div class="contacto-container">
+    <!-- Columna izquierda: Formulario -->
+    <form id="contactoForm" class="contacto-form">
+      <h2>Formulario de Contacto</h2>
 
-<section class="contacto_contacto">
-  <div class="contacto_container">
+      <label for="nombre">Nombre *</label>
+      <input type="text" id="nombre" name="nombre" required>
 
-    <!-- TÍTULO Y P -->
-    <h2 class="contacto_titulo">Contacto</h2>
-    <p class="contacto_texto">
-      Queremos escucharte. Completa el formulario a continuación y nuestro equipo se pondrá en contacto contigo para cualquier consulta, sugerencia o reserva.
-    </p>
+      <label for="apellido">Apellido *</label>
+      <input type="text" id="apellido" name="apellido" required>
 
-    <!-- CONTENEDOR FLEX -->
-    <div class="contacto_flex">
+      <label for="fecha">Fecha de nacimiento *</label>
+      <input type="date" id="fecha" name="fecha" required>
 
-      <!-- FORMULARIO -->
-      <form class="contacto_formulario">
-
-        <!-- NOMBRE Y APELLIDO -->
-        <div class="contacto_row">
-          <div class="contacto_col">
-            <label for="nombre_contacto">Nombre *</label>
-            <input type="text" id="nombre_contacto" name="nombre_contacto" required>
-          </div>
-          <div class="contacto_col">
-            <label for="apellido_contacto">Apellido *</label>
-            <input type="text" id="apellido_contacto" name="apellido_contacto" required>
-          </div>
+      <div class="form-group">
+        <label>Sexo:</label>
+        <div class="sexo-options">
+          <label>
+            <input type="radio" name="sexo" value="masculino"> Masculino
+          </label>
+          <label>
+            <input type="radio" name="sexo" value="femenino"> Femenino
+          </label>
+          <label>
+            <input type="radio" name="sexo" value="otro"> Otro
+          </label>
         </div>
-
-        <!-- FECHA NACIMIENTO Y SEXO -->
-        <div class="contacto_row">
-          <div class="contacto_col">
-            <label for="fecha_contacto">Fecha de Nacimiento *</label>
-            <input type="date" id="fecha_contacto" name="fecha_contacto" required>
-          </div>
-          <div class="contacto_col">
-            <label>Sexo *</label>
-            <div class="contacto_sexo">
-              <label><input type="radio" name="sexo_contacto" value="Masculino" required> Masculino</label>
-              <label><input type="radio" name="sexo_contacto" value="Femenino" required> Femenino</label>
-              <label><input type="radio" name="sexo_contacto" value="Otro" required> Otro</label>
-            </div>
-          </div>
-        </div>
-
-        <!-- DESTINOS DE PREFERENCIA -->
-        <div class="contacto_row">
-          <div class="contacto_col_full">
-            <label>Destinos de Preferencia</label>
-            <div class="contacto_destinos">
-              <label><input type="checkbox" name="destinos_contacto[]" value="Italia"> Italia</label>
-              <label><input type="checkbox" name="destinos_contacto[]" value="Grecia"> Grecia</label>
-              <label><input type="checkbox" name="destinos_contacto[]" value="Egipto"> Egipto</label>
-              <label><input type="checkbox" name="destinos_contacto[]" value="Turquía"> Turquía</label>
-              <label><input type="checkbox" name="destinos_contacto[]" value="Caribe"> Caribe</label>
-              <label><input type="checkbox" name="destinos_contacto[]" value="Japón"> Japón</label>
-            </div>
-          </div>
-        </div>
-
-        <!-- CHECKBOX SUSCRIBIRSE Y TERMINOS -->
-        <div class="contacto_row">
-          <div class="contacto_col_full">
-            <label><input type="checkbox" name="suscribirse_contacto"> Suscribirme a novedades</label>
-          </div>
-          <div class="contacto_col_full">
-            <label><input type="checkbox" name="terminos_contacto" required> Acepto los términos y condiciones *</label>
-          </div>
-        </div>
-
-        <!-- COMENTARIO -->
-        <div class="contacto_row">
-          <div class="contacto_col_full">
-            <label for="comentario_contacto">Consulta</label>
-            <textarea id="comentario_contacto" name="comentario_contacto" rows="4" placeholder="Escribí tu consulta aquí..."></textarea>
-          </div>
-        </div>
-
-        <!-- BOTÓN ENVIAR -->
-        <div class="contacto_row">
-          <button type="submit" class="contacto_boton">Enviar</button>
-        </div>
-
-      </form>
-
-      <!-- IMÁGENES -->
-      <div class="contacto_imagenes">
-        <img src="../img/nosotros3.png" alt="Imagen contacto 1" class="contacto_img" title="Imagen de gente divertida en el Crucero" >
-        <img src="../img/flota_nota_2.jpg" alt="Imagen contacto 2" class="contacto_img" title="Imagen del osceano">
       </div>
 
-    </div>
 
+
+      <label for="destinos">Destino preferido *</label>
+      <select id="destinos" name="destinos" required>
+        <option value="">Seleccionar...</option>
+        <option>Caribe</option>
+        <option>Asia</option>
+        <option>Europa</option>
+        <option>África</option>
+        <option>América del Sur</option>
+        <option>América del Norte</option>
+        <option>Oceanía</option>
+      </select>
+
+      <label for="email">Correo electrónico *</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="comentario">Comentario</label>
+      <textarea id="comentario" name="comentario" rows="4"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Columna derecha: Imágenes -->
+    <div class="contacto-imagenes">
+      <img src="../img/crucero1.jpg" alt="Crucero 1">
+      <img src="../img/malaga_cale_nuevo.jpg" alt="Crucero 2">
+      <img src="../img/nosotros1.png" alt="Crucero 3">
+    </div>
   </div>
 </section>
+
+<script>
+  document.getElementById("contactoForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    if(this.checkValidity()){
+      alert("✅ Gracias por contactarte, esperamos verte pronto a bordo 🚢");
+      this.reset();
+    } else {
+      alert("⚠️ Por favor, completá todos los campos obligatorios.");
+    }
+  });
+</script>
+
 
 
 
