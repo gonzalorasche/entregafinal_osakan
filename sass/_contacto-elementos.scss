@@ -69,20 +69,17 @@
 }
 
 .sexo-options label {
-  display: block;        // cada opción en su propia línea
-  margin: 4px 0;         // espacio entre líneas
-  font-weight: normal;   // nada en negrita
-  cursor: default;       // el cursor normal
+  display: block;  
+  margin: 4px 0;  
+  font-weight: normal; 
+  cursor: default;  
 }
 
 .sexo-options input[type="radio"] {
-  all: unset;            // limpia cualquier estilo heredado de tu SASS
-  appearance: radio;     // lo vuelve un radio "común" del navegador
-  margin-right: 6px;     // separación entre el círculo y el texto
+  all: unset;            
+  appearance: radio;    
+  margin-right: 6px;  
 }
-
-
-
 
 .contacto-form button {
     margin-top: 1.5rem;
